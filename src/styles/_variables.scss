@@ -1,0 +1,45 @@
+// _variables.scss
+
+// 📱 Layout breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+$breakpoint-minimum: 320px;
+
+// 🎨 Colors
+
+// Primary
+$color-light-red: hsl(0, 100%, 67%);
+$color-orangey-yellow: hsl(39, 100%, 56%);
+$color-green-teal: hsl(166, 100%, 37%);
+$color-cobalt-blue: hsl(234, 85%, 45%);
+
+// Primary-transparency
+$color-light-red-transparency: hsl(0, 100%, 67%, 0.1);
+$color-orangey-yellow-transparency: hsl(39, 100%, 56%, 0.1);
+$color-green-tea-transparency: hsl(166, 100%, 37%, 0.1);
+$color-cobalt-blue-transparency: hsl(234, 85%, 45%, 0.1);
+
+// Gradients (background)
+$gradient-slate-blue: hsl(252, 100%, 67%);
+$gradient-royal-blue: hsl(241, 81%, 54%);
+
+// Gradients (circle)
+$gradient-violet-blue: hsla(256, 72%, 46%, 1);
+$gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+// Neutral
+$color-white: hsl(0, 0%, 100%);
+$color-pale-blue: hsl(221, 100%, 96%);
+$color-light-lavender: hsl(241, 100%, 89%);
+$color-dark-gray-blue: hsl(224, 30%, 27%);
+
+// ✍️ Typography
+$font-size-base: 18px;
+
+$font-family-main: 'Hanken Grotesk', sans-serif;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// 💡 Notes
+// Use hsla() with alpha for transparency variations if needed.

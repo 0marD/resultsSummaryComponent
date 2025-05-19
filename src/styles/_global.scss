@@ -1,0 +1,15 @@
+@use "variables";
+
+* {
+    font-family: variables.$font-family-main;
+    font-size: variables.$font-size-base;
+    font-weight: 300;
+}
+
+body {
+    background-color: variables.$color-light-lavender;
+
+    @media (width > 375px) {
+        padding: 1rem;
+    }
+}

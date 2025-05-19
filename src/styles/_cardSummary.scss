@@ -1,0 +1,103 @@
+@use "variables";
+
+.cardSummary {
+    display: grid;
+    padding: 2rem 1.8rem;
+    gap: 1.2rem;
+    height: fit-content;
+    place-items: center;
+
+    &__list {
+        display: grid;
+        gap: 0.8rem;
+        width: 100%;
+        place-items: center;
+    }
+
+    &__header {
+        width: 100%;
+
+        &-text {
+            font-weight: variables.$font-weight-extrabold;
+            color: variables.$color-dark-gray-blue;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0.7rem;
+
+        &--reaction {
+            background-color: variables.$color-light-red-transparency;
+            color: variables.$color-light-red;
+        }
+
+        &--memory {
+            background-color: variables.$color-orangey-yellow-transparency;
+            color: variables.$color-orangey-yellow;
+        }
+
+        &--verbal {
+            background-color: variables.$color-green-tea-transparency;
+            color: variables.$color-green-teal;
+        }
+
+        &--visual {
+            background-color: variables.$color-cobalt-blue-transparency;
+            color: variables.$color-cobalt-blue;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        width: fit-content;
+        font-weight: variables.$font-weight-medium;
+    }
+
+    &__icon {
+        height: 1rem;
+    }
+
+    &__score {
+        font-weight: variables.$font-weight-extrabold;
+        color: variables.$color-dark-gray-blue;
+
+        &-total {
+            font-weight: variables.$font-weight-medium;
+            opacity: 0.8;
+        }
+    }
+
+    &__button {
+        background-color: variables.$color-dark-gray-blue;
+        color: variables.$color-white;
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 2rem;
+        font-weight: variables.$font-weight-medium;
+        cursor: pointer;
+        transition: scale 0.3s ease-in-out;
+
+        &:hover {
+            background: linear-gradient(to top, variables.$gradient-royal-blue, variables.$gradient-slate-blue);
+        }
+
+        &:active {
+            transition: scale 0.3s ease-in;
+            scale: 0.9;
+        }
+    }
+
+    @media (width >=768px) {
+        &__header {
+            &-text {
+                font-size: 1.32rem;
+            }
+        }
+    }
+}

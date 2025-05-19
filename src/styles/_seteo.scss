@@ -1,0 +1,111 @@
+@use "variables";
+
+// Reset básico y normalización general
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-family-main;
+    font-size: variables.$font-size-base;
+    font-weight: 300;
+}
+
+// Seteo de HTML y body
+html {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: system-ui, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-rendering: optimizeSpeed;
+    -webkit-tap-highlight-color: transparent;
+    background-color: variables.$color-light-lavender;
+    display: flex;
+    justify-content: center;
+    
+    @media (width > 720px) {
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+    }
+}
+
+// Tipografía y textos
+p {
+    text-align: center;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Imágenes y multimedia
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Formularios
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+// Tablas
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Accesibilidad y enfoque
+:focus-visible {
+    outline: 2px solid #000; // Cambia por un color accesible o de tu diseño
+    outline-offset: 2px;
+}
+
+// Prevención de desbordes
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}

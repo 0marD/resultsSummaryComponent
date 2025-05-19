@@ -1,0 +1,83 @@
+@use "variables";
+
+.cardResult {
+    width: 100%;
+    color: variables.$color-pale-blue;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 0 0 1.75rem 1.75rem;
+    padding: 1.5rem 0 2.5rem 0;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+
+
+    &-header {
+        opacity: 0.65;
+        font-weight: variables.$font-weight-bold;
+    }
+
+    &-circle {
+        background: linear-gradient(to top, variables.$gradient-persian-blue, variables.$gradient-violet-blue);
+        width: 7.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        place-content: center;
+
+        &Score {
+            font-size: 3rem;
+            font-weight: variables.$font-weight-extrabold;
+        }
+
+        &Total {
+            opacity: 0.5;
+        }
+    }
+
+    &-paragraph {
+        display: grid;
+        place-items: center;
+        max-width: 254px;
+        gap: .5rem;
+
+        &Rating {
+            font-weight: variables.$font-weight-medium;
+            font-size: 1.33rem;
+        }
+
+        &Description {
+            font-size: 0.85rem;
+            opacity: .8;
+        }
+    }
+
+    @media (width >=768px) {
+        border-radius: 1.75rem;
+        height: 100%;
+
+        &-header {
+            font-size: 1.35rem;
+            font-weight: variables.$font-weight-medium
+        }
+
+        &-circle {
+            width: 11.2rem;
+
+            &Score {
+                font-size: 4rem;
+            }
+        }
+
+        &-paragraph {
+            &Rating {
+                font-size: 1.75rem;
+            }
+
+            &Description {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "variables";
+
+.card {
+    width: 100vw;
+    max-width: 375px;
+    background-color: variables.$color-white;
+    overflow: hidden;
+    display: grid;
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    @media (width >= 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-radius: 1.75rem;
+        max-width: 735px;
+    }
+
+    
+}
